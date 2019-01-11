@@ -1,0 +1,294 @@
+
+body {
+font-family: 'Architects Daughter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+
+}
+#paper-back {
+width: 100%;
+height: 100vh;
+
+position: fixed;
+top: 0;
+left: 0;
+font-size: 33px;
+}
+#paper-back nav {
+padding: 120px 34px;
+}
+#paper-back nav a {
+display: block;
+margin-bottom: 25px;
+text-decoration: none;
+color: white;
+
+}
+#paper-window {
+height: 100vh;
+width: 100vw;
+position: relative;
+overflow-x: hidden;
+overflow-y: hidden;
+z-index: 2;
+}
+#paper-window.tilt {
+overflow: hidden;
+pointer-events: none;
+}
+#paper-window.tilt #paper-front {
+transform: rotate(10deg) translateZ(0);
+}
+#paper-front {
+pointer-events: auto;
+position: relative;
+z-index: 3;
+background-repeat: no-repeat;
+background-size: contain;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+transform-origin: center 70%;
+transition: all 0.3s ease;background-repeat: no-repeat;
+
+
+}
+#container section {
+height: 640px;
+text-align: center;
+}
+#container section:first-of-type {
+padding-top: 10vh;
+}
+#container section:first-of-type h1 {
+font-size: 45px;
+}
+#container section:first-of-type p {
+font-size: 25px;
+}
+@media (max-width: 600px) {
+#container section:first-of-type {
+padding-top: 15vh;
+}
+#container section:first-of-type h1 {
+font-size: 30px;
+}
+#container section:first-of-type p {
+font-size: 18px;
+}
+}
+.hamburger {
+position: fixed;
+z-index: 4;
+top: 30px;
+left: 30px;
+width: 45px;
+height: 34px;
+cursor: pointer;
+user-select: none;
+}
+.hamburger span {
+position: relative;
+}
+.hamburger span, .hamburger span:before, .hamburger span:after {
+display: block;
+width: 45px;
+height: 6px;
+background-color: #fff;
+border-radius: 2px;
+}
+.hamburger span:before, .hamburger span:after {
+content: '';
+position: absolute;
+}
+.hamburger span:before {
+bottom: -14px;
+}
+.hamburger span:after {
+bottom: -28px;
+}
+.close {
+position: fixed;
+top: 30px;
+left: 30px;
+width: 45px;
+height: 34px;
+cursor: pointer;
+}
+.close:before, .close:after {
+content: '';
+position: absolute;
+display: block;
+width: 45px;
+height: 6px;
+top: 50%;
+background-color: white;
+border-radius: 2px;
+}
+.close:before {
+transform: translateY(-50%) rotate(45deg);
+}
+.close:after {
+transform: translateY(-50%) rotate(-45deg);
+}
+.list {
+position: fixed;
+top: 80px;
+left: 30px;
+width: 80px;
+height: 34px;
+padding:10px;
+font-size: 20px;
+
+}
+.list:before, .list:after {
+
+position: absolute;
+display: block;
+width: 80px;
+height: 6px;
+
+background-color: white;
+border-radius: 2px;
+}
+.list:before {
+transform: translateY(-50%) rotate(45deg);
+}
+.list:after {
+transform: translateY(-50%) rotate(-45deg);
+}
+iframe{
+    width:100vw;
+    height:100vh;
+}
+#javaImg{
+    width: 100vw;
+    height: 100vh;
+}
+#paper-back nav .a:hover {
+    color: #e25822;
+}
+#paper-back nav .active{
+    color:#e25822;
+    text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px #F90, 0px -20px 40px #C33;
+    font-size: 33px;
+}
+.btn {
+    position: relative;
+    overflow: hidden;
+    background: none;
+    padding: 1em;
+    background-color: transparent;
+    transition: background-color 250ms ease-in;
+    font-size: 1.5rem;
+    color: #fff;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+    border: none;
+}
+.btn.btn-small {
+    font-size: 1rem;
+    position: fixed;
+    right: 10px;
+    top: 40px;
+    z-index: 4;
+    cursor: pointer;
+    user-select: none;
+}
+.btn.btn-big {
+    font-size: 2rem;
+}
+.btn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+}
+.btn > span {
+    position: relative;
+}
+.btn .btn_svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.btn .btn_svg_shape {
+    stroke: orange;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    fill: transparent;
+}
+.btn:hover {
+    transition-delay: 250ms;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+.btn:hover:before {
+    opacity: 0;
+}
+.btn:hover .btn_svg_shape {
+    transition-property: stroke-dasharray, stroke-dashoffset;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+    stroke-dashoffset: 0 !important;
+    -webkit-animation: 500ms pencil ease-in forwards;
+    animation: 500ms pencil ease-in forwards;
+}
+/* Stroke animation. Use ems to scale :) */
+@-webkit-keyframes pencil {
+    0% {
+        stroke-width: 0.5em;
+    }
+    75% {
+        stroke-width: 0.25em;
+    }
+    100% {
+        stroke-width: 0.1em;
+    }
+}
+@keyframes pencil {
+    0% {
+        stroke-width: 0.5em;
+    }
+    75% {
+        stroke-width: 0.25em;
+    }
+    100% {
+        stroke-width: 0.1em;
+    }
+}
+/* Transition mixin, cause lazy */
+/* W00t border-box */
+* {
+    box-sizing: border-box;
+}
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+/* Make things perty */
+a {
+    color: orange;
+    text-decoration: none;
+    transition: color 250ms ease-in-out;
+}
+a:hover {
+    color: yellow;
+}
+.container {
+    display: block;
+    margin: 2em 0;
+}

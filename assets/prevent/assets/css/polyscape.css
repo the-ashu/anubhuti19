@@ -1,0 +1,200 @@
+* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+}
+
+html{
+		overflow-x: hidden;
+}
+
+
+/*-------------------*/
+/* Background styles */
+/*-------------------*/
+
+.polyscape-background {
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		position: relative;		
+		display: flex;
+		justify-content: center;
+		align-items: center;		
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;		
+}
+
+.polyscape-background > div {
+		position: absolute;
+}
+
+
+/*-------------------*/
+/*		Polyscape 1	 	 */
+/*-------------------*/
+
+#polyscape-1 {
+		background-image: url(../images/polyscape-1/mountain.jpg) ;
+}
+
+#polyscape-1 .circle{
+		width: 400px;
+		height: 400px;
+		border-radius: 50%;
+		background: url(../images/polyscape-1/poly2.JPG);
+		background-size: cover;
+	filter: opacity(80%) saturate(70%);
+}
+
+#polyscape-1 .square-rotated {
+		width: 480px;
+		height: 480px;
+		transform: rotate(45deg); 
+		filter: invert(25%);
+		border: 200px solid transparent;
+		border-image: url(../images/polyscape-1/mountain.jpg) 200 stretch;
+}
+
+#polyscape-1 .square {
+		width: 480px;
+		height: 480px;
+		border: 10px solid #fff;       
+		background: url(../images/polyscape-1/mountain.JPG) fixed center;
+		background-size: cover;
+}
+
+
+/*-------------------*/
+/*		Polyscape 2	 	 */
+/*-------------------*/
+
+#polyscape-2 {
+		background-image: url(../images/polyscape-2/mist.jpg) ;
+}
+
+#polyscape-2 .diamond {
+		width: 420px;
+		height: 560px;
+		background: url(../images/polyscape-2/city1.jpg) center;
+		background-size: cover;
+		clip-path: polygon(50% 0, 0 65%,  50% 100%, 100% 65%);
+}
+
+#polyscape-2 .diamond:first-child {
+		transform: translateX(-100px);
+		filter: opacity(80%) saturate(70%);;
+}
+
+#polyscape-2 .diamond:last-child {
+		transform: translateX(100px);		
+		filter: opacity(70%) brightness(1.4);;
+}
+
+
+/*-------------------*/
+/*		Polyscape 3 	 */
+/*-------------------*/
+
+#polyscape-3 {
+		background-image: url(../images/polyscape-3/space.jpg) ;
+}
+
+#polyscape-3 .triangle{
+		width: 600px;
+		height: 560px;
+		background: url(../images/polyscape-3/mountain.JPG);
+	    filter: opacity(70%) saturate(70%);
+		clip-path: polygon(40% 0, 0 100%, 100% 100%);
+
+}
+
+
+/*-------------------*/
+/*		Polyscape 4	 	 */
+/*-------------------*/
+
+#polyscape-4 {
+		background-image: url(../images/polyscape-4/lake.jpg) ;
+		filter: grayscale(25%);
+}
+
+#polyscape-4 .circle{
+		width: 400px;
+		height: 400px;
+		border-radius: 50%;
+		background: url(../images/polyscape-4/clouds.jpg);
+		background-size: cover;
+	filter: opacity(70%) saturate(70%);
+}
+
+#polyscape-4 .square-rotated {
+		width: 460px;
+		height: 460px;
+		transform: rotate(45deg); 
+		background: transparent;
+		border: 25px solid transparent;
+		border-image: url(../images/polyscape-4/clouds.jpg) 25 stretch;
+	filter: opacity(70%) saturate(70%);
+}
+
+
+#polyscape-4 .square {
+		width: 460px;
+		height: 460px;
+		background: transparent;
+		border: 2px solid transparent;
+		border-image: url(../images/polyscape-4/clouds.jpg) 2 stretch;
+		filter: hue-rotate(50deg) contrast(140%);
+}
+
+
+/*-------------------*/
+/*		Polyscape 5	 	 */
+/*-------------------*/
+
+#polyscape-5 {
+		background-image: url(../images/polyscape-5/mountain.jpg) ;
+}
+
+#polyscape-5 .triangle{
+		clip-path: polygon(50% 0, 0 100%, 100% 100%);
+		background-color: rgba(181, 41, 41, 0.4);
+}
+
+#polyscape-5 .triangle:first-child{
+		width: 600px;
+		height: 525px;
+	background: url(../images/polyscape-5/_C0A8865.JPG) ;
+}
+#polyscape-6 {
+	background-image: url(../images/polyscape-6/poly3.JPG) ;
+}
+
+#polyscape-6 .circle{
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	background: url(../images/polyscape-6/poly2.JPG);
+	background-size: cover;
+	filter: opacity(95%) saturate(90%);
+}
+
+#polyscape-6 .square-rotated {
+	width: 480px;
+	height: 480px;
+	transform: rotate(45deg);
+	filter: invert(25%);
+	border: 200px solid transparent;
+	border-image: url(../images/polyscape-6/poly3.JPG) 200 stretch;
+}
+
+#polyscape-6 .square {
+	width: 480px;
+	height: 480px;
+	border: 10px solid #fff;
+	background: url(../images/polyscape-6/poly3.JPG) fixed center;
+	background-size: cover;
+}
+

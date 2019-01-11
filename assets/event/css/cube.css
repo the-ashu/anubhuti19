@@ -1,0 +1,79 @@
+body {
+  overflow-x: hidden; }
+
+.Cubes {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+  margin: 0 0 0 0;
+ }
+  .Cubes img {
+    display: block;
+    max-width: 100%; }
+  .Cubes * {
+    box-sizing: border-box; }
+  .Cubes::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.CubeWrapper {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: block;
+  float: left;
+  height: 0;
+  padding-bottom: 50%;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  position: relative;
+  text-align: center;
+  width: 50%;
+  z-index: 1; }
+  .CubeWrapper:hover {
+    z-index: 10; }
+
+@media (min-width: 600px) {
+  .CubeWrapper {
+    padding-bottom: 33.3333333333%;
+    width: 33.3333333333%; } }
+
+@media (min-width: 1000px) {
+  .CubeWrapper {
+    padding-bottom: 25%;
+    width: 25%; } }
+
+.Cube {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 100%;
+ }
+
+.Cube-side {
+
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+
+.Cube-side--second {
+  display: none; }

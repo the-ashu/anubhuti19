@@ -1,0 +1,66 @@
+/*-------------------*/
+/*		Navigation	 	 */
+/*-------------------*/
+
+nav {
+		position: fixed;
+		right: 40px;
+		top: 0;
+		height: 100%;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		z-index: 10;
+}
+
+nav li {
+		padding: 10px 0;
+}
+
+nav li a {
+		position: relative;
+		display: block;
+}
+
+nav li a:after {
+		content: "";
+		display: block;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		border: 2px solid #FFF;
+		transition: 0.2s;
+}
+
+nav li.active a:after {
+  	background: #FFF;
+}
+
+nav.dark li a:after {		
+		border: 2px solid #FFF;
+}
+
+nav.dark li.active a:after {
+  	background: #FFF;
+}
+
+
+/* -- Demo ads -- */
+
+#bsaHolder {
+    margin-top: 25px;
+}
+
+@media (max-width: 1200px) {
+    #bsaHolder{ display:none;}
+}
+h1{
+	text-transform: uppercase;
+	color: white;
+	text-align: left;
+	left: 20px;
+	bottom: 50px;
+	z-index: 4;
+	position: absolute;
+}
